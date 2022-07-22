@@ -395,6 +395,9 @@ nav{
         }
 }
 footer{
+    #mailto{
+            text-decoration: underline;
+    }
     position: relative;
     display: flex;
     align-items: center;

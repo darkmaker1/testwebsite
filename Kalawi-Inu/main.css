@@ -720,6 +720,10 @@ footer {
   background-color: #000;
 }
 
+footer #mailto {
+  text-decoration: underline;
+}
+
 footer h1 {
   display: -webkit-box;
   display: -ms-flexbox;
