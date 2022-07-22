@@ -15,6 +15,8 @@ body {
   font-family: 'Lato', sans-serif;
   font-family: 'Nunito', sans-serif;
   overflow-x: hidden;
+  color: #f2f2f2;
+  background-color: #000;
 }
 
 a {
@@ -32,7 +34,7 @@ a, p {
 }
 
 a {
-  color: #000;
+  color: #f2f2f2;
 }
 
 h2 {
@@ -69,8 +71,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 12rem;
-  background-color: #f2f2f2;
-  opacity: 90%;
+  background-color: #000;
   height: 100px;
   width: 100%;
   position: fixed;
@@ -104,6 +105,7 @@ nav .logo-text p a {
   font-size: 3.2rem;
   font-weight: bold;
   margin-left: 2rem;
+  color: #f2f2f2;
 }
 
 nav ul {
@@ -124,12 +126,12 @@ nav ul {
 }
 
 nav ul a {
-  color: #000;
+  color: #f2f2f2;
 }
 
 #home {
   min-height: 80rem;
-  background-color: #F1BA60;
+  background-color: #000;
   padding-top: 115px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -151,7 +153,7 @@ nav ul a {
 }
 
 #home .welcome-text span {
-  color: #D81E29;
+  color: #f2f2f2;
 }
 
 #home .welcome-text h5 {
@@ -185,7 +187,8 @@ nav ul a {
   color: #f2f2f2;
   font-weight: bold;
   padding: 1rem 2rem;
-  background-color: #000;
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 #home .welcome-text .welcome-badges {
@@ -247,7 +250,7 @@ nav ul a {
 }
 
 #about {
-  background-color: #D81E29;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,7 +325,7 @@ nav ul a {
 
 #tokenomics {
   min-height: 600px;
-  background-color: #F1BA60;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -387,7 +390,7 @@ nav ul a {
 #features {
   padding: 0 10%;
   min-height: 80rem;
-  background-color: #D81E29;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,7 +482,7 @@ nav ul a {
 #roadmap {
   padding: 0 10%;
   min-height: 75rem;
-  background-color: #F1BA60;
+  background-color: #000;
 }
 
 #roadmap h2 {
@@ -516,6 +519,7 @@ nav ul a {
   position: absolute;
   top: 10px;
   left: 25%;
+  color: #000;
 }
 
 #roadmap .border {
@@ -545,38 +549,28 @@ nav ul a {
 #how-to-buy {
   padding: 0 10%;
   min-height: 75rem;
-  background-color: #D81E29;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-#how-to-buy iframe {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin-top: 20rem;
-}
-
-#how-to-buy .steps {
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  margin-bottom: 5rem;
-}
-
-#how-to-buy .steps h2 {
+#how-to-buy h2 {
   font-family: 'Space Grotesk';
   padding: 5rem 0;
 }
 
-#how-to-buy .steps .steps-2 {
+#how-to-buy .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,25 +584,28 @@ nav ul a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 5rem;
-  margin-top: 3rem;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-#how-to-buy .steps .steps-2 .step h5 {
+#how-to-buy .steps .step h5 {
   font-family: 'Space Grotesk';
   font-size: 2.2rem;
   font-weight: bold;
 }
 
-#how-to-buy .steps .steps-2 .step h3 {
+#how-to-buy .steps .step h3 {
   font-family: 'Space Grotesk';
   font-size: 2rem;
   margin-bottom: 3rem;
 }
 
-#how-to-buy .steps .steps-2 .step .step-box {
+#how-to-buy .steps .step .step-box {
+  color: #000;
   margin-top: 3rem;
-  background-color: #F1BA60;
+  background-color: #f2f2f2;
   height: 34.4rem;
   width: 24.4rem;
   padding: 3rem;
@@ -616,7 +613,7 @@ nav ul a {
 
 #partners {
   min-height: 30rem;
-  background-color: #F1BA60;
+  background-color: #000;
   padding: 0 10%;
 }
 
@@ -646,14 +643,9 @@ nav ul a {
   width: 26rem;
 }
 
-#partners .all-partners #partner-1 {
-  -o-object-fit: cover;
-  object-fit: cover;
-}
-
 #join-us {
   min-height: 80rem;
-  background-color: #FEF8EF;
+  background-color: #000;
   padding: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,7 +702,8 @@ nav ul a {
   color: #f2f2f2;
   font-weight: bold;
   padding: 1rem 2rem;
-  background-color: #000;
+  background-color: #f2f2f2;
+  color: #000;
 }
 
 footer {
@@ -724,7 +717,7 @@ footer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   min-height: 15rem;
-  background-color: #D81E29;
+  background-color: #000;
 }
 
 footer h1 {
@@ -765,6 +758,7 @@ footer .copyright {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #000;
+  color: #f2f2f2;
   color: #f2f2f2;
 }
 
@@ -904,6 +898,9 @@ footer .copyright {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 2rem;
+  }
+  footer ul li a {
+    color: #f2f2f2;
   }
   footer .copyright {
     padding: 2rem;

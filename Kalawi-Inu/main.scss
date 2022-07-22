@@ -13,6 +13,8 @@ body{
     font-family: 'Lato', sans-serif;
     font-family: 'Nunito', sans-serif;
     overflow-x: hidden;
+    color: $main-white;
+    background-color: #000;
 }
 a{
     all: unset;
@@ -26,7 +28,7 @@ a,p{
     font-size: 1.6rem
 }
 a{
-    color: #000;
+    color: $main-white;
 }
 h2{
     font-size: $h2-pc;
@@ -44,8 +46,8 @@ nav{
     @include flexCenter(row);
     justify-content: space-between;
     padding: 0 12rem;
-    background-color: #f2f2f2;
-    opacity: 90%;
+    background-color: #000;
+    // opacity: 90%;
     height: 100px;
     width: 100%;
     position: fixed;
@@ -62,6 +64,7 @@ nav{
             font-size: 3.2rem;
             font-weight: bold;
             margin-left: 2rem;
+            color: $main-white
         }
         }
     }
@@ -69,13 +72,13 @@ nav{
         @include flexCenter(row);
         gap: 2rem;
         a{
-            color: #000;
+            color: $main-white;
         }
     }
 }
 #home{
     min-height: 80rem;
-    background-color: $orange;
+    background-color: $black;
     padding-top: 115px;
     display: flex;
 .welcome-text{
@@ -88,8 +91,7 @@ nav{
         font-family: 'Space Grotesk';
     }
     span{
-        color: $red;
-        // text-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+        color: $main-white;
     }
     h5{
         margin-bottom: 3rem;
@@ -105,7 +107,8 @@ nav{
             color: $main-white;
             font-weight: bold;
             padding: 1rem 2rem;
-            background-color: #000;
+            background-color: $main-white;
+            color: #000;
         }
         }
     .welcome-badges{
@@ -144,7 +147,7 @@ nav{
     h2{
         font-family: 'Space Grotesk';
     }
-    background-color: $red;
+    background-color: $black;
     @include flexCenter(row);
     justify-content: space-between;
     padding: 0 10%;
@@ -169,7 +172,7 @@ nav{
 }
 #tokenomics{
     min-height: 600px;
-    background-color: $orange;
+    background-color: $black;
     h2{
         font-family: 'Space Grotesk';
         margin-top: 5rem;
@@ -209,7 +212,7 @@ nav{
 #features{
     padding: 0 10%;
     min-height: 80rem;
-    background-color: $red;
+    background-color: $black;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -255,7 +258,7 @@ nav{
 #roadmap{
     padding: 0 10%;
     min-height: 75rem;
-    background-color: $orange;
+    background-color: $black;
     h2{
         font-family: 'Space Grotesk';
         padding: 5rem 0;
@@ -273,6 +276,7 @@ nav{
             position: absolute;
             top: 10px;
             left: 25%;
+            color: #000;
         }
     }
     .border{
@@ -299,25 +303,17 @@ nav{
 #how-to-buy{
     padding: 0 10%;
     min-height: 75rem;
-    background-color: $red;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    iframe{
-        flex: 1;
-        margin-top: 20rem;
-    }
+    background-color: $black;
+    @include flexCenter(column);
+    h2{
+        font-family: 'Space Grotesk';
+        padding: 5rem 0;
+    };
     .steps{
-        flex: 2;
+        @include flexCenter(row);
+        gap: 2rem;
         margin-bottom: 5rem;
-        h2{
-            font-family: 'Space Grotesk';
-            padding: 5rem 0;
-        };
-        .steps-2{
-            @include flexCenter(row);
-            gap: 5rem;
-            margin-top: 3rem;
+        flex-wrap: wrap;
             .step{
                 h5{
                     font-family: 'Space Grotesk';
@@ -330,19 +326,20 @@ nav{
                     margin-bottom: 3rem;
                 }
                 .step-box{
+                    color: #000;
                     margin-top: 3rem;
-                    background-color: $orange;
+                    background-color: $main-white;
                     height: 34.4rem;
                     width: 24.4rem;
                     padding: 3rem;
                 }
             }
-        }
+
     }
 }
 #partners{
     min-height: 30rem;
-    background-color: $orange;
+    background-color: $black;
     padding: 0 10%;
     h2{
         font-family: 'Space Grotesk';
@@ -359,15 +356,11 @@ nav{
             height: 5rem;
             width: 26rem;
         }
-        #partner-1{
-            -o-object-fit: cover;
-               object-fit: cover;
-        }
     }
 }
 #join-us{
     min-height: 80rem;
-    background-color: #FEF8EF;
+    background-color: #000;
     padding: 0 10%;
     display: flex;
     flex-direction: column;
@@ -396,7 +389,8 @@ nav{
             color: $main-white;
             font-weight: bold;
             padding: 1rem 2rem;
-            background-color: #000;
+            background-color: $main-white;
+            color: #000;
         }
         }
 }
@@ -406,7 +400,7 @@ footer{
     align-items: center;
     justify-content: space-around;
     min-height: 15rem;
-    background-color: $red;
+    background-color: $black;
     h1{
         display: flex;
         align-items: center;
@@ -430,6 +424,7 @@ footer{
         display: flex;
         justify-content: center;
         background-color: #000;
+        color: $main-white;
         color: $main-white;
     }
 }
@@ -551,6 +546,11 @@ footer{
         flex-direction: column; 
         align-items: center;
         margin-bottom: 2rem;
+        li{
+            a{
+                color: $main-white;
+            }
+        } 
     }
     .copyright{
         padding: 2rem;
