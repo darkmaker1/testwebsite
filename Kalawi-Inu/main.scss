@@ -49,6 +49,7 @@ nav{
     height: 100px;
     width: 100%;
     position: fixed;
+    top: 0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
     .logo-text{
         @include flexCenter(row);
