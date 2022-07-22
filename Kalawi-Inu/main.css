@@ -756,9 +756,6 @@ footer .copyright {
 }
 
 @media only screen and (max-width: 900px) {
-  body {
-    overflow-x: auto;
-  }
   nav {
     padding: 0 2rem;
   }
@@ -800,6 +797,9 @@ footer .copyright {
   #home .welcome-text .welcome-links a {
     width: 80%;
   }
+  #home .welcome-text .wlcome-adress p a {
+    font-size: 1.3rem;
+  }
   #home .welcome-badges {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -832,6 +832,16 @@ footer .copyright {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  #how-to-buy .steps .steps-2 .step .step-box {
+    width: 30rem;
+    height: 44rem;
+  }
+  #how-to-buy .steps .steps-2 .step .step-box h3 {
+    font-size: 2.2rem;
+  }
+  #how-to-buy .steps .steps-2 .step .step-box p {
+    font-size: 2rem;
   }
   #how-to-buy iframe {
     display: none;
@@ -880,6 +890,7 @@ footer .copyright {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-bottom: 2rem;
   }
   footer .copyright {
     padding: 2rem;
