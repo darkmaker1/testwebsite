@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=IBM+Plex+Mono&family=Lato:wght@300;400;700&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Barlow+Condensed:ital,wght@1,300&family=IBM+Plex+Mono&family=Lato:wght@300;400;700&family=Montserrat&display=swap');
+    
+$black: #030303;
+$white: #f2f2f2;
+$yellow: #E6B420;
+$gray: #747D8C;
+$px-50: 5rem;
+$px-45: 4.5rem;
+$px-35: 3.5rem;
+$px-30: 3rem;
+$px-24: 2.4rem;
+$px-20: 2rem;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $direction;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 10px;
+    overflow-x: hidden;
+}
+body{
+    min-height: 100vh;
+}
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    color: $black;
+    text-decoration: none;
+    font-size: $px-24;
+    font-family: Lato;
+}
+p{
+    font-size: $px-24;
+    color: $black;
+    font-family: Lato;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: Arvo;
+
+}
+header{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+    nav{
+        width: 100%;
+        height: 8rem;
+        background-color: $yellow;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10rem;
+        a{
+            font-weight: lighter;
+        }
+        #logo{
+            height: 7rem;
+        }
+        ul{
+            @include flexCenter(row);
+            gap: 3rem;
+            list-style-type: none;
+            
+        }
+        #call{
+            font-weight: bold;
+            padding: 1rem;
+            background-color: $gray;
+            color: $white;
+        }
+    }
+}
+footer{
+    width: 100%;
+    height: 5rem;
+    background-color: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    p,a{
+        font-weight: bold;
+        color: $white;
+    }
+    .icons{
+        display: flex;
+        gap: 2rem;
+    }
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    // margin-top: 10rem;
+    width: 100%;
+    height: 100%;
+    section{
+        margin-top: 3rem;
+        position: relative;
+        @include flexCenter(row);
+        max-height: 60rem;
+        width: 90%;
+        display: flex;
+        article{
+            min-height: 60rem;
+            position: relative; 
+            color: $white;
+            width: 80%;
+            display: flex;
+            h1{
+                font-size: $px-50;
+            }
+            p{
+                color: $white;
+            }
+            a{
+                color: $white;
+            }
+            // Home page start
+            .left{
+                width: 75%;
+                background-image: url(./media/home-taxi.jpg);
+                object-fit: fill;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 2rem;
+                padding-left: 2rem;
+                p{
+                    max-width: 80%;
+                    font-weight: lighter;
+                }
+                a{
+                    width: 28%;
+                    padding: 1rem 3rem;
+                    background-color: $gray;
+                    text-align: center;
+                }
+            }
+            .right{
+                width: auto;
+                background-color: $yellow;
+                @include flexCenter(column);
+                gap: 3rem;
+                h2{
+                    font-size: $px-24;
+                    text-align: center;
+                }
+                img[alt="logo"]{
+                    height: 17rem;
+                }
+                a{
+                    width: 80%;
+                    padding: 1rem 3rem;
+                    background-color: $gray;
+                    text-align: center;
+                }
+            }
+            // Home page end
+
+        }
+    }
+        // Page 2 start
+        #schiphol{
+            @include flexCenter(column);
+            gap: 3rem;        
+            h1{
+                margin-top: 3rem;
+                font-size:$px-35; 
+            }
+            .cards{
+                @include flexCenter(row);
+                flex-wrap: wrap;
+                gap: 4rem;
+                .card{
+                    display: flex;
+                    @include flexCenter(column);
+                    gap: .5rem;
+                    width: 30rem;
+                    border: 1px solid $yellow;
+                    padding: 1rem;
+                    h3{
+                        font-size: $px-30;
+                        font-weight: lighter;
+                    }
+                    a{
+                        padding: 1rem 3rem;
+                        background-color: #747D8C;
+                        text-align: center;
+                        border-radius: 5px;
+                        color: $white;
+                    }
+                    span{
+                        font-size: $px-20;
+                        color: $gray;
+                    }
+                }
+            }
+        }
+            // Page 2 end
+
+            // page 3 start
+            .top-taxi{
+                width: 100%;
+                @include flexCenter(row);
+                img[alt="taxi"]{
+                    height: 30vh;
+                }   
+            }
+            .more-info{
+                @include flexCenter(row);
+                justify-content: space-between;
+                width: 100%;
+                padding: 10% 20%;
+                gap: 20%;
+                .info{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4rem;
+                    p{
+                        font-size: $px-30;
+                    }
+                    table{
+                        width: 33vw;
+                        th,td{
+                            background-color: #F1F5F9;
+                            padding: 0.3rem 1rem;
+                            font-size: $px-20;
+                        }
+                        th{
+                            color: $yellow;
+                        }
+                    }
+                }
+                .pay-service{
+                    @include flexCenter(column);
+                    gap: 4rem;
+                    .pay{
+                        h3{
+                            font-size: $px-24;
+                            text-align: center;
+                            font-weight: normal
+                        }
+                        .border{
+                            @include flexCenter(column);
+                            border: 1px solid $gray;
+                            min-height: 100%;
+                            width: 40rem;
+                            padding: 2rem 0;
+                            gap: 2rem;
+                            p{
+                                font-size: 1.5rem;
+                                text-align: center;
+                            }
+                            img{
+                                width: 37rem;
+                            }
+                        }
+                    }
+                    .service{
+                        h3{
+                            font-size: $px-24;
+                            text-align: center;
+                            font-weight: normal
+                        }
+                        .border{
+                            border: 1px solid $gray;
+                            min-height: 100%;
+                            width: 40rem;
+                            padding: 3rem;
+                            gap: 2rem;
+                            min-height: 25rem;
+                            p{
+                                color: $white;
+                                font-size: $px-24;
+                            }
+                            background-image: url(./media/airplain.jpg);
+                            object-fit: fill;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                        }
+                    }
+                }
+            }
+            #hz{
+                margin: 3rem 0;
+                height: 2px;
+                width: 100%;
+                background-color: $gray;
+            }
+            .reserveren-form{
+                @include flexCenter(column);
+                h1{
+                    font-size: $px-45;
+                    font-weight: normal;
+                }
+            }
+            // page 3 end
+
+            // page 4 start
+
+            .over{
+                padding: 3 5rem;
+                padding-top: 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 3rem;
+                h1{
+                    font-size: $px-35;
+                }
+                .over-content{
+                    @include flexCenter(row);
+                    margin-bottom: 3rem;
+                    gap: 2rem;
+                    .over-text{
+                        @include flexCenter(column);
+                        p{
+                            line-height: 2;
+                            font-size: $px-20;
+                            max-width: 70rem;
+                        }
+                    }
+                    img{
+                        height: 80vh;
+                    }
+
+                }
+
+            }
+}
+#over-footer{
+    width: 100%;
+    height: 5rem;
+    background-color: $yellow;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10rem;
+    position: static;
+    left: 0;
+    bottom: 0;
+    p,a{
+        font-weight: bold;
+        color: $white;
+    }
+    .icons{
+        display: flex;
+        gap: 2rem;
+    }
+}
+        // page 4 end

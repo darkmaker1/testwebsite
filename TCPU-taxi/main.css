@@ -1,0 +1,379 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,300&family=IBM+Plex+Mono&family=Lato:wght@300;400;700&family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Barlow+Condensed:ital,wght@1,300&family=IBM+Plex+Mono&family=Lato:wght@300;400;700&family=Montserrat&display=swap");
+html {
+  scroll-behavior: smooth;
+  font-size: 10px;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #030303;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-family: Lato;
+}
+
+p {
+  font-size: 2.4rem;
+  color: #030303;
+  font-family: Lato;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arvo;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+}
+header nav {
+  width: 100%;
+  height: 8rem;
+  background-color: #E6B420;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rem;
+}
+header nav a {
+  font-weight: lighter;
+}
+header nav #logo {
+  height: 7rem;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 3rem;
+  list-style-type: none;
+}
+header nav #call {
+  font-weight: bold;
+  padding: 1rem;
+  background-color: #747D8C;
+  color: #f2f2f2;
+}
+
+footer {
+  width: 100%;
+  height: 5rem;
+  background-color: #E6B420;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+}
+footer p, footer a {
+  font-weight: bold;
+  color: #f2f2f2;
+}
+footer .icons {
+  display: flex;
+  gap: 2rem;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+main section {
+  margin-top: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  max-height: 60rem;
+  width: 90%;
+  display: flex;
+}
+main section article {
+  min-height: 60rem;
+  position: relative;
+  color: #f2f2f2;
+  width: 80%;
+  display: flex;
+}
+main section article h1 {
+  font-size: 5rem;
+}
+main section article p {
+  color: #f2f2f2;
+}
+main section article a {
+  color: #f2f2f2;
+}
+main section article .left {
+  width: 75%;
+  background-image: url(./media/home-taxi.jpg);
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  padding-left: 2rem;
+}
+main section article .left p {
+  max-width: 80%;
+  font-weight: lighter;
+}
+main section article .left a {
+  width: 28%;
+  padding: 1rem 3rem;
+  background-color: #747D8C;
+  text-align: center;
+}
+main section article .right {
+  width: auto;
+  background-color: #E6B420;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+main section article .right h2 {
+  font-size: 2.4rem;
+  text-align: center;
+}
+main section article .right img[alt=logo] {
+  height: 17rem;
+}
+main section article .right a {
+  width: 80%;
+  padding: 1rem 3rem;
+  background-color: #747D8C;
+  text-align: center;
+}
+main #schiphol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+main #schiphol h1 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+}
+main #schiphol .cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+main #schiphol .cards .card {
+  display: flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 30rem;
+  border: 1px solid #E6B420;
+  padding: 1rem;
+}
+main #schiphol .cards .card h3 {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+main #schiphol .cards .card a {
+  padding: 1rem 3rem;
+  background-color: #747D8C;
+  text-align: center;
+  border-radius: 5px;
+  color: #f2f2f2;
+}
+main #schiphol .cards .card span {
+  font-size: 2rem;
+  color: #747D8C;
+}
+main .top-taxi {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+main .top-taxi img[alt=taxi] {
+  height: 30vh;
+}
+main .more-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10% 20%;
+  gap: 20%;
+}
+main .more-info .info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .more-info .info p {
+  font-size: 3rem;
+}
+main .more-info .info table {
+  width: 33vw;
+}
+main .more-info .info table th, main .more-info .info table td {
+  background-color: #F1F5F9;
+  padding: 0.3rem 1rem;
+  font-size: 2rem;
+}
+main .more-info .info table th {
+  color: #E6B420;
+}
+main .more-info .pay-service {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .more-info .pay-service .pay h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: normal;
+}
+main .more-info .pay-service .pay .border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #747D8C;
+  min-height: 100%;
+  width: 40rem;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+main .more-info .pay-service .pay .border p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+main .more-info .pay-service .pay .border img {
+  width: 37rem;
+}
+main .more-info .pay-service .service h3 {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: normal;
+}
+main .more-info .pay-service .service .border {
+  border: 1px solid #747D8C;
+  min-height: 100%;
+  width: 40rem;
+  padding: 3rem;
+  gap: 2rem;
+  min-height: 25rem;
+  background-image: url(./media/airplain.jpg);
+  -o-object-fit: fill;
+     object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .more-info .pay-service .service .border p {
+  color: #f2f2f2;
+  font-size: 2.4rem;
+}
+main #hz {
+  margin: 3rem 0;
+  height: 2px;
+  width: 100%;
+  background-color: #747D8C;
+}
+main .reserveren-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .reserveren-form h1 {
+  font-size: 4.5rem;
+  font-weight: normal;
+}
+main .over {
+  padding: 3 5rem;
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+}
+main .over h1 {
+  font-size: 3.5rem;
+}
+main .over .over-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 3rem;
+  gap: 2rem;
+}
+main .over .over-content .over-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .over .over-content .over-text p {
+  line-height: 2;
+  font-size: 2rem;
+  max-width: 70rem;
+}
+main .over .over-content img {
+  height: 80vh;
+}
+
+#over-footer {
+  width: 100%;
+  height: 5rem;
+  background-color: #E6B420;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rem;
+  position: static;
+  left: 0;
+  bottom: 0;
+}
+#over-footer p, #over-footer a {
+  font-weight: bold;
+  color: #f2f2f2;
+}
+#over-footer .icons {
+  display: flex;
+  gap: 2rem;
+}/*# sourceMappingURL=main.css.map */
