@@ -664,6 +664,7 @@ header nav .menu-btn-burger::after {
   }
   main #schiphol h1 {
     font-size: 2rem;
+    max-width: 70%;
   }
   footer {
     height: unset;
