@@ -11,7 +11,10 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav id="nav">
+            <div id="menu-btn" class="menu-btn">
+                <div class="menu-btn-burger"></div>
+              </div>
             <img src="./media/logo.svg" alt="logo" id="logo">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -19,7 +22,7 @@
                 <li><a href="reserveren.html">Reserveren</a></li>
                 <li><a href="over-ons.html">Over ons</a></li>
             </ul>
-            <a id="call" href="tel:+31 623 - 35 23 27">(+31) 64896615</a>
+            <a id="call" href="tel:+31 623 - 35 23 27">(+31) 61111111</a>
         </nav>
     </header>
 
@@ -76,44 +79,61 @@
         <div id="hz"></div>
         <div class="reserveren-form">
             <h1>Reserveer nu een rit naar u bestemming</h1>
-            <form action="#">
+            <form action="">
                 <div class="left-form">
                     <h3>Waar wil je heen?</h3>
-                    <label for="van">van
-                        <input type="text" name="van" id="van" placeholder="straat met huisnummer">
-                    </label>
-                    <label for="naar">naar
-                        <input type="text" name="vanaarn" id="naar" placeholder="straat met huisnummer">
-                    </label>
-                    <label for="bagage">
-                        Reis je met bagage?
-                        <label for="ja">
+                    <div class="input-group">
+                        <input   type="text" name="van" autocomplete="off" class="input">
+                        
+                        <label class="user-label">van</label>
+                      </div>
+                    <div class="input-group">
+                        <input   type="text" name="naar" autocomplete="off" class="input">
+                        
+                        <label class="user-label">naar</label>
+                      </div>
+                    <label for="bagage">Reis je met bagage?<br> 
+                        <div>
+                        <label for="ja">Ja
                             <input type="radio" name="bagage" id="ja" value="ja">
-                            Ja
                         </label>
-                            <label for="nee">
-                                <input type="radio" name="bagage" id="nee" value="Nee, ik heb geen bagage">
-                                Nee, ik heb geen bagage
-                            </label>
+                       
+                        <label for="nee">Nee, ik heb geen bagage
+                            <input type="radio" name="bagage" id="nee" value="Nee, ik heb geen bagage">
+                        </label>
+                    </div>
                     </label>
+                    
                 </div>
                 <div class="right-form">
                     <div class="ver-hr"></div>
                     <div class="date">
                             <h3>Ophaalmoment taxi</h3>
-                            <input type="text" name="ophale" id="ophale" placeholder="Selecteer een datum">
+                            <div class="input-group">
+                                <input   type="text" name="ophale" autocomplete="off" class="input">
+                                
+                                <label class="user-label">Selecteer een datum</label>
+                              </div>
                             <label for="retour">
                                 <input type="checkbox" name="retour" id="retour">
                                 Retour
-                                <input type="text" name="retour-reis" id="retour-reis " placeholder="Selecteer een datum">
                             </label>
-                            <label for="aantal">
-                                Aantal reizigers
-                                <input type="number" name="aantal" id="aantal" min="1" max="9" step="1" value="1">
-                            </label>
+                            
+                            <div class="input-group">
+                                <input type="text" name="retour-reis" autocomplete="off" class="input">
+                                
+                                <label class="user-label">Selecteer een datum</label>
+                              </div>
+                                <label for="aantal">Aantal reizigers</label>
+                            <div class="aantal-number">
+                                <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+                                <input type="number" id="number" value="0" />
+                                <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+                            </div>
                             
                     </div>
                 </div>
+                <button onclick="errorForm()">Bereken mijn ritprijs</button>
             </form>
         </div>
     </main>
@@ -127,5 +147,6 @@
         <p>Taxicentrale provincie Utrecht</p>
         <a href="mailto:info@tcpu.nl">info@tcpu.nl</a>
     </footer>
+    <script src="./main.js"></script>
 </body>
 </html>

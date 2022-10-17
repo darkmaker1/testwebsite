@@ -8,6 +8,8 @@ html {
 
 body {
   min-height: 100vh;
+  padding-bottom: 6rem;
+  position: relative;
 }
 
 *, *::after, *::before {
@@ -42,12 +44,11 @@ header {
 }
 header nav {
   width: 100%;
-  height: 8rem;
   background-color: #E6B420;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 10rem;
+  padding: 1rem 10rem;
 }
 header nav a {
   font-weight: lighter;
@@ -66,8 +67,8 @@ header nav ul {
 header nav #call {
   font-weight: bold;
   padding: 1rem;
-  background-color: #747D8C;
-  color: #f2f2f2;
+  background-color: #f2f2f2;
+  color: #454c56;
 }
 
 footer {
@@ -78,9 +79,10 @@ footer {
   align-items: center;
   justify-content: space-between;
   padding: 0 10rem;
-  position: fixed;
-  left: 0;
+  position: absolute;
+  right: 0;
   bottom: 0;
+  left: 0;
 }
 footer p, footer a {
   font-weight: bold;
@@ -106,8 +108,6 @@ main section {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  max-height: 60rem;
-  width: 90%;
   display: flex;
 }
 main section article {
@@ -116,6 +116,7 @@ main section article {
   color: #f2f2f2;
   width: 80%;
   display: flex;
+  flex-direction: row;
 }
 main section article h1 {
   font-size: 5rem;
@@ -127,7 +128,6 @@ main section article a {
   color: #f2f2f2;
 }
 main section article .left {
-  width: 75%;
   background-image: url(./media/home-taxi.jpg);
   -o-object-fit: fill;
      object-fit: fill;
@@ -143,11 +143,21 @@ main section article .left p {
   max-width: 80%;
   font-weight: lighter;
 }
-main section article .left a {
-  width: 28%;
+main section article .left .shiphol {
+  text-decoration: underline;
+}
+main section article .left #a-button {
+  all: unset;
+  width: 20rem;
   padding: 1rem 3rem;
-  background-color: #747D8C;
+  background-color: #f2f2f2;
+  color: #454c56;
   text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 2.4rem;
+  font-family: Lato;
+  margin: 1rem;
 }
 main section article .right {
   width: auto;
@@ -168,7 +178,9 @@ main section article .right img[alt=logo] {
 main section article .right a {
   width: 80%;
   padding: 1rem 3rem;
-  background-color: #747D8C;
+  background-color: #f2f2f2;
+  color: #454c56;
+  font-weight: bold;
   text-align: center;
 }
 main #schiphol {
@@ -180,7 +192,8 @@ main #schiphol {
 }
 main #schiphol h1 {
   margin-top: 3rem;
-  font-size: 3.5rem;
+  font-size: 2.4rem;
+  max-width: 50%;
 }
 main #schiphol .cards {
   display: flex;
@@ -189,6 +202,7 @@ main #schiphol .cards {
   flex-direction: row;
   flex-wrap: wrap;
   gap: 4rem;
+  margin-bottom: 3rem;
 }
 main #schiphol .cards .card {
   display: flex;
@@ -233,7 +247,7 @@ main .more-info {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 10% 20%;
+  padding: 10%;
   gap: 20%;
 }
 main .more-info .info {
@@ -323,6 +337,152 @@ main .reserveren-form h1 {
   font-size: 4.5rem;
   font-weight: normal;
 }
+main .reserveren-form form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin: 3rem 0;
+  padding: 3rem;
+  width: 100%;
+  min-height: 50vh;
+  height: 100%;
+  background-color: #FFCF4C;
+  position: relative;
+  color: #5A238D;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+main .reserveren-form form button {
+  all: unset;
+  cursor: pointer;
+  background-color: #747D8C;
+  color: #f2f2f2;
+  padding: 1rem 3rem;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 5%;
+  right: 3%;
+  font-size: 2rem;
+}
+main .reserveren-form form .left-form label[for=bagage] {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .reserveren-form form .left-form label[for=bagage] div {
+  display: flex;
+  gap: 2rem;
+}
+main .reserveren-form form .right-form input[type=text] {
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #454c56;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 1rem 0;
+}
+main .reserveren-form form .right-form input[type=text]:focus {
+  outline: none;
+}
+main .reserveren-form form .left-form, main .reserveren-form form .right-form {
+  flex: 1;
+  height: 35vh;
+  display: flex;
+  flex-direction: column;
+}
+main .reserveren-form form .left-form .input-group, main .reserveren-form form .right-form .input-group {
+  position: relative;
+}
+main .reserveren-form form .left-form .input, main .reserveren-form form .right-form .input {
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+  color: #454c56;
+  transition: border 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 1rem 0;
+  width: 100%;
+}
+main .reserveren-form form .left-form .user-label, main .reserveren-form form .right-form .user-label {
+  position: absolute;
+  left: 15px;
+  color: #747D8C;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+main .reserveren-form form .left-form .input:focus, main .reserveren-form form .left-form input:valid, main .reserveren-form form .right-form .input:focus, main .reserveren-form form .right-form input:valid {
+  outline: none;
+}
+main .reserveren-form form .left-form .input:focus ~ label, main .reserveren-form form .left-form input:valid ~ label, main .reserveren-form form .right-form .input:focus ~ label, main .reserveren-form form .right-form input:valid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  padding: 0 0.2em;
+  color: #747D8C;
+}
+main .reserveren-form form .left-form label, main .reserveren-form form .right-form label {
+  font-size: 2.4rem;
+}
+main .reserveren-form form .left-form h3, main .reserveren-form form .right-form h3 {
+  font-size: 2.4rem;
+  margin: 1rem 0;
+}
+main .reserveren-form form .left-form .date, main .reserveren-form form .right-form .date {
+  display: flex;
+  flex-direction: column;
+}
+main .reserveren-form form .left-form label[for=retour], main .reserveren-form form .left-form label[for=aantal], main .reserveren-form form .right-form label[for=retour], main .reserveren-form form .right-form label[for=aantal] {
+  margin: 1rem 0;
+}
+main .reserveren-form .value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+main .reserveren-form .value-button:hover {
+  cursor: pointer;
+}
+main .reserveren-form .aantal-number {
+  display: flex;
+}
+main .reserveren-form form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+  height: 100%;
+}
+main .reserveren-form form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+}
+main .reserveren-form form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+main .reserveren-form input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+}
+main .reserveren-form input[type=number]::-webkit-inner-spin-button,
+main .reserveren-form input[type=number]::-webkit-outer-spin-button {
+  margin: 0;
+}
 main .over {
   padding: 3 5rem;
   padding-top: 3rem;
@@ -357,23 +517,160 @@ main .over .over-content img {
   height: 80vh;
 }
 
-#over-footer {
-  width: 100%;
-  height: 5rem;
-  background-color: #E6B420;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10rem;
-  position: static;
-  left: 0;
-  bottom: 0;
-}
-#over-footer p, #over-footer a {
-  font-weight: bold;
-  color: #f2f2f2;
-}
-#over-footer .icons {
-  display: flex;
-  gap: 2rem;
+@media only screen and (max-width: 900px) {
+  header nav {
+    display: flex;
+    flex-direction: column;
+    opacity: 95%;
+    z-index: 50;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    transition: 600ms ease-in-out;
+    /* ANIMATION */
+  }
+  header nav .menu-btn {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-top: 2rem;
+    margin-left: 2.5rem;
+    position: fixed;
+    top: 0;
+    right: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+  header nav .menu-btn-burger {
+    width: 50px;
+    height: 6px;
+    background: #454c56;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  header nav .menu-btn-burger::before,
+header nav .menu-btn-burger::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #454c56;
+    border-radius: 5px;
+    transition: all 0.5s ease-in-out;
+  }
+  header nav .menu-btn-burger::before {
+    transform: translateY(-16px);
+  }
+  header nav .menu-btn-burger::after {
+    transform: translateY(16px);
+  }
+  header nav .menu-btn.open .menu-btn-burger {
+    background: transparent;
+  }
+  header nav .menu-btn.open .menu-btn-burger::before {
+    transform: rotate(45deg);
+  }
+  header nav .menu-btn.open .menu-btn-burger::after {
+    transform: rotate(-45deg);
+  }
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav.nav-open {
+    top: 0;
+    transition: 600ms ease-in-out;
+  }
+  @-webkit-keyframes nav-load {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes nav-load {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  main section article {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    width: 95%;
+  }
+  main section article h1 {
+    font-size: 3.5rem;
+  }
+  main section article p {
+    font-size: 2rem;
+  }
+  main section article #a-button {
+    width: unset;
+    width: 50%;
+    padding: 1rem 3rem;
+    background-color: #f2f2f2;
+    color: #454c56;
+    text-align: center;
+    font-weight: bold;
+  }
+  main section article .left, main section article .right {
+    padding: 2rem;
+  }
+  main section article .left p {
+    max-width: 100%;
+  }
+  main .over {
+    padding: 1rem;
+  }
+  main .over h1 {
+    font-size: 3rem;
+  }
+  main .over .over-content {
+    flex-direction: column;
+  }
+  main .over .over-content p {
+    font-size: 1.8rem;
+  }
+  main .over .over-content img {
+    height: 60vh;
+  }
+  main .more-info {
+    flex-direction: column;
+  }
+  main .reserveren-form h1 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  main .reserveren-form form {
+    flex-direction: column;
+    width: 80%;
+  }
+  main .reserveren-form form button {
+    position: unset;
+  }
+  main #schiphol h1 {
+    font-size: 2rem;
+  }
+  footer {
+    height: unset;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    position: absolute;
+    bottom: unset;
+  }
 }/*# sourceMappingURL=main.css.map */
