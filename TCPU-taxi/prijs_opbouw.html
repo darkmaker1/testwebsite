@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./media/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="./media/logo.svg" type="image/x-icon">
+    <title>TCPU</title>
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div id="menu-btn" class="menu-btn">
+                <div class="menu-btn-burger"></div>
+              </div>
+            <img src="./media/logo.svg" alt="logo" id="logo">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li>
+                    <a onclick="shoowMenu()">Luchthaven vervoer</a>
+                    <ul class="active-menu hideMenu" id="dropdown">
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a onclick="shoowMenu2()">Reserveren</a>
+                    <ul class="active-menu hideMenu" id="dropdown2">
+                        <li><a href="reserveren.html" >Reserveer direct</a></li>
+                        <li><a href="prijs_opbouw.html" >Prijs opbouw</a></li>
+                        <li><a href="prijs_opbouw.html" >Luchthaven Service</a></li>
+                    </ul>
+                </li>
+                <li><a href="over-ons.html">Over ons</a></li>
+            </ul>
+            <a id="call" href="tel:+3161111111">(+31) 61111111</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- <div class="top-taxi">
+            <img src="./media/taxi.png" alt="taxi">
+        </div> -->
+
+        <div class="more-info">
+            <div class="info">
+                <h2>Prijs opbouw:</h2>
+                <p>Neem vrijblijvend contact met ons op om te informeren naar onze uiterst scherpe tarieven.</p>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>TAXI</th>
+                        <th>VIP BUS</th>
+                    </tr>
+                    <tr>
+                        <td>Start tarief</td>
+                        <td>€ 3,10</td>
+                        <td>Op aanvraag</td>
+                    </tr>
+                    <tr>
+                        <td>kilometertarief</td>
+                        <td>€ 3,10</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>Tijdtarief</td>
+                        <td>€ 0,39</td>
+                        <td></td>
+                    </tr>
+                </table>
+                <p>Voor ritopdrachten van en naar vliegvelden hanteren wij zeer scherpe tarieven.
+                    Informeer vrijblijvend naar de prijzen.</p>
+            </div>
+            <div class="pay-service">
+                <div class="pay">
+                    <h3>BETAALMOGELIJKHEDEN</h3>
+                    <div class="border">
+                        <p>Betaald u liever met PIN of creditcard? Informeer naar onze mogelijkheden.</p>
+                        <img src="./media/payment.jpg" alt="payment">
+                    </div>
+                </div>
+                <div class="service">
+                    <h3>VLIEGVELD SERVICE</h3>
+                    <div class="border">
+                        <p>Voor ritopdrachten van en naar luchthaven hanteren we zeer sherpe tarieven. 
+                            Boek uw taxi via <a href = "luchthaven-vervoer.html">luchthabven vervoer.</a> 
+                            Mocht uw luchthaven er niet tussen staan neem dan gerust contact op.</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer id="over-footer">
+        <div class="icons">
+          <a href="#" target="_blank">  <img src="./media/insta.svg" alt="insta"></img></a>
+          <a href="#" target="_blank">  <img src="./media/twitter.svg" alt="twitter"></img></a>
+          <a href="#" target="_blank">  <img src="./media/whatsapp.svg" alt="whatsapp"></img></a>
+        </div>
+        <p>Taxicentrale provincie Utrecht</p>
+        <a href="mailto:info@tcpu.nl">info@tcpu.nl</a>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>

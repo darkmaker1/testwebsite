@@ -17,13 +17,27 @@
               </div>
             <img src="./media/logo.svg" alt="logo" id="logo">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="schiphol-Tarieven.html">Schiphol Tarieven</a></li>
-                <li><a href="reserveren.html">Reserveren</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li>
+                    <a onclick="shoowMenu()">Luchthaven vervoer</a>
+                    <ul class="active-menu hideMenu" id="dropdown">
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                        <li><a href="luchthaven-vervoer.html" >Schiphol airport</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a onclick="shoowMenu2()">Reserveren</a>
+                    <ul class="active-menu hideMenu" id="dropdown2">
+                        <li><a href="reserveren.html" >Reserveer direct</a></li>
+                        <li><a href="#" >Prijs opbouw</a></li>
+                        <li><a href="#" >Luchthaven Service</a></li>
+                    </ul>
+                </li>
                 <li><a href="over-ons.html">Over ons</a></li>
             </ul>
-            <a id="call" href="tel:+31 623 - 35 23 27">(+31) 61111111</a>
-        </nav>
+            <a id="call" href="tel:+3161111111">(+31) 61111111</a>
+        </nav>  
     </header>
 
     <main>

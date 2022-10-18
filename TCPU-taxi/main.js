@@ -31,3 +31,17 @@ menuBtn.addEventListener('click', () => {
 function errorForm(){
     alert("Er is iets misgeggan neem contact via Whatsapp");
 }
+document.querySelectorAll('nav > ul > li').forEach((el) =>{
+  el.addEventListener('click', ()=>{
+      document.querySelector('li.active').classList.remove('active');
+      el.classList.toggle('active');
+  })
+});
+function shoowMenu() {
+  let menu = document.getElementById("dropdown");
+      menu.classList.toggle("hideMenu");
+}
+function shoowMenu2() {
+  let menu = document.getElementById("dropdown2");
+      menu.classList.toggle("hideMenu");
+}

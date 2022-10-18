@@ -23,6 +23,7 @@ a {
   text-decoration: none;
   font-size: 2.4rem;
   font-family: Lato;
+  cursor: pointer;
 }
 
 p {
@@ -43,6 +44,7 @@ header {
   z-index: 99;
 }
 header nav {
+  position: relative;
   width: 100%;
   background-color: #E6B420;
   display: flex;
@@ -63,6 +65,21 @@ header nav ul {
   flex-direction: row;
   gap: 3rem;
   list-style-type: none;
+}
+header nav ul li {
+  position: relative;
+}
+header nav ul li .active-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  left: 2rem;
+  padding: 1rem;
+  color: #030303;
+  background-color: #E6B420;
+}
+header nav ul li .hideMenu {
+  display: none;
 }
 header nav #call {
   font-weight: bold;
@@ -247,7 +264,7 @@ main .more-info {
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
-  padding: 10%;
+  padding: 5%;
   gap: 20%;
 }
 main .more-info .info {
@@ -255,8 +272,11 @@ main .more-info .info {
   flex-direction: column;
   gap: 4rem;
 }
-main .more-info .info p {
+main .more-info .info h2 {
   font-size: 3rem;
+}
+main .more-info .info p {
+  font-size: 2.4rem;
 }
 main .more-info .info table {
   width: 33vw;
@@ -319,7 +339,11 @@ main .more-info .pay-service .service .border {
 }
 main .more-info .pay-service .service .border p {
   color: #f2f2f2;
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+main .more-info .pay-service .service .border p a {
+  color: #454c56;
+  text-decoration: underline;
 }
 main #hz {
   margin: 3rem 0;
@@ -328,6 +352,7 @@ main #hz {
   background-color: #747D8C;
 }
 main .reserveren-form {
+  padding-top: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -40,6 +40,7 @@ a{
     text-decoration: none;
     font-size: $px-24;
     font-family: Lato;
+    cursor: pointer;
 }
 p{
     font-size: $px-24;
@@ -56,12 +57,14 @@ header{
     width: 100%;
     z-index: 99;
     nav{
+        position: relative;
         width: 100%;
         background-color: $yellow;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 1rem 10rem;
+        // height: 10rem;
         a{
             font-weight: lighter;
         }
@@ -72,7 +75,22 @@ header{
             @include flexCenter(row);
             gap: 3rem;
             list-style-type: none;
-            
+            li{
+                position: relative;
+                .active-menu{
+                    position: absolute;
+                    display: flex;
+                    // background-color: red;
+                    flex-direction: column;
+                    left: 2rem;
+                    padding: 1rem;
+                    color: $black;
+                    background-color: $yellow;
+                }
+                .hideMenu{
+                    display: none;
+                }
+            }
         }
         #call{
             font-weight: bold;
@@ -251,14 +269,17 @@ main{
                 justify-content: space-between;
                 // flex-wrap: wrap;
                 width: 100%;
-                padding: 10%;
+                padding: 5%;
                 gap: 20%;
                 .info{
                     display: flex;
                     flex-direction: column;
                     gap: 4rem;
-                    p{
+                    h2{
                         font-size: $px-30;
+                    }
+                    p{
+                        font-size: $px-24;
                     }
                     table{
                         width: 33vw;
@@ -312,7 +333,11 @@ main{
                             min-height: 25rem;
                             p{
                                 color: $white;
-                                font-size: $px-24;
+                                font-size: $px-20;
+                                a{
+                                    color: #454c56;
+                                    text-decoration: underline;
+                                }
                             }
                             background-image: url(./media/airplain.jpg);
                             object-fit: fill;
@@ -329,6 +354,7 @@ main{
                 background-color: $gray;
             }
             .reserveren-form{
+                padding-top: 3rem;
                 @include flexCenter(column);
                 h1{
                     font-size: $px-45;
